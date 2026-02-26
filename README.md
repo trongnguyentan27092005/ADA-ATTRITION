@@ -96,8 +96,8 @@ jupyter notebook Model/Predictive_Analysis__Final.ipynb
 ### Web Dashboard
 - HTML5, CSS3 (Flexbox & Grid)
 - JavaScript (ES6+)
-- [Chart.js](https://www.chartjs.org/) — Biểu đồ tương tác
-- [Font Awesome](https://fontawesome.com/) — Icon
+- [Chart.js](https://www.chartjs.org/) - Biểu đồ tương tác
+- [Font Awesome](https://fontawesome.com/) - Icon
 
 ### Data Analysis & Modeling
 - Python
@@ -107,7 +107,7 @@ jupyter notebook Model/Predictive_Analysis__Final.ipynb
 
 ## Dataset
 
-**IBM HR Employee Attrition** — Bộ dữ liệu gồm 1,470 nhân viên với 35 thuộc tính bao gồm:
+**IBM HR Employee Attrition** - Bộ dữ liệu gồm 1,470 nhân viên với 35 thuộc tính bao gồm:
 - Thông tin cá nhân (tuổi, giới tính, tình trạng hôn nhân, ...)
 - Thông tin công việc (phòng ban, vị trí, mức lương, làm thêm giờ, ...)
 - Mức độ hài lòng (môi trường, công việc, quan hệ, ...)
