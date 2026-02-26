@@ -45,7 +45,28 @@ Giao diện web với sidebar điều hướng gồm 5 mục chính:
 
 ## Cách chạy
 
-### Web Dashboard
+### 1. Clone & Cấu hình
+
+```bash
+git clone https://github.com/trongnguyentan27092005/ADA-ATTRITION.git
+cd ADA-ATTRITION
+```
+
+Tạo file `.env` ở thư mục gốc (dựa theo `.env.example`):
+
+```bash
+cp .env.example .env
+```
+
+Mở file `.env` và điền API key của bạn:
+
+```env
+API=your_gemini_api_key_here
+```
+
+> **Lưu ý:** Cần có [Gemini API Key](https://aistudio.google.com/app/apikey) để sử dụng tính năng AI Recommendation trong phần Prediction.
+
+### 2. Chạy Web Dashboard
 
 ```bash
 # Cài dependencies
@@ -57,7 +78,7 @@ npm run dev
 
 Hoặc mở trực tiếp `index.html` trong trình duyệt.
 
-### Jupyter Notebooks
+### 3. Jupyter Notebooks
 
 ```bash
 # Mở notebook EDA
