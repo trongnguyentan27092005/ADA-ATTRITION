@@ -1,0 +1,22 @@
+{
+  "name": "he-thong-quan-ly-nhan-su",
+  "version": "1.0.0",
+  "description": "Hệ thống quản lý nhân sự công ty IBM",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=3000 --open=/index.html",
+    "start": "live-server",
+    "serve": "python -m http.server 8000"
+  },
+  "keywords": [
+    "hr",
+    "management",
+    "ibm",
+    "web-app"
+  ],
+  "author": "Nhom11loveThayCuong",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

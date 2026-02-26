@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ - Hệ thống quản lí nhân sự công ty IBM</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <script src="script.js"></script>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-left">
+            <div class="hamburger-menu">
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <!-- Dropdown Menu -->
+                <div class="dropdown-menu" id="dropdownMenu">
+                    <div class="dropdown-item" data-menu="menu">
+                        <i class="fas fa-database"></i>
+                        <span>Dữ liệu</span>
+                    </div>
+                    <div class="dropdown-item" data-menu="program">
+                        <i class="fas fa-tasks"></i>
+                        <span>Tổng quan</span>
+                    </div>
+                    <div class="dropdown-item" data-menu="report">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Phân tích theo nhóm</span>
+                    </div>
+                    <div class="dropdown-item" data-menu="payment">
+                        <i class="fas fa-brain"></i>
+                        <span>Model Training</span>
+                    </div>
+                    <div class="dropdown-item" data-menu="ai">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Prediction</span>
+                    </div>
+                </div>
+            </div>
+            <h1><span class="page-title">Trang chủ</span></h1>
+        </div>
+        <div class="header-center">
+            <h2>Hệ thống quản lí nhân sự công ty IBM</h2>
+        </div>
+        <div class="header-right">
+            <span>🌟 Nhom11loveThayCuong@ibm.com 💖</span>
+        </div>
+    </header>
+
+    <!-- Container chính -->
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <nav class="nav-menu">
+                <div class="menu-item active">
+                    <i class="fas fa-database"></i>
+                    <span>Dữ liệu</span>
+                </div>
+                <div class="menu-item">
+                    <i class="fas fa-tasks"></i>
+                    <span>Tổng quan</span>
+                </div>
+                <div class="menu-item">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Phân tích theo nhóm</span>
+                </div>
+                <div class="menu-item">
+                    <i class="fas fa-brain"></i>
+                    <span>Model Training</span>
+                </div>
+                <div class="menu-item">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Prediction</span>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Khu vực nội dung chính -->
+        <main class="main-content">
+            <!-- IBM Logo Background -->
+            <div class="ibm-logo-bg">
+                <div class="ibm-stripes">
+                    <div class="stripe"></div>
+                    <div class="stripe"></div>
+                    <div class="stripe"></div>
+                    <div class="stripe"></div>
+                    <div class="stripe"></div>
+                    <div class="stripe"></div>
+                    <div class="stripe"></div>
+                    <div class="stripe"></div>
+                </div>
+                <div class="ibm-text">IBM</div>
+            </div>
+            
+            <div class="content-placeholder">
+                <i class="fas fa-plus-circle"></i>
+                <p>Khu vực nội dung chính</p>
+                <p class="placeholder-text">Bạn có thể thêm nội dung vào đây</p>
+            </div>
+
+            <!-- Overview Dashboard Section -->
+            <div class="overview-section" id="overviewSection" style="display:none;">
+                <!-- Header -->
+                <div class="overview-header">
+                    <div class="overview-header-left">
+                        <h2><i class="fas fa-chart-pie"></i> Tổng quan nhân sự IBM</h2>
+                        <p>Phân tích tổng quan tình hình nhân viên và tỷ lệ nghỉ việc</p>
+                    </div>
+                </div>
+
+                <!-- Key Metrics Cards -->
+                <div class="overview-metrics">
+                    <div class="metric-card metric-primary">
+                        <div class="metric-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="metric-content">
+                            <h3 id="totalEmployees">1,470</h3>
+                            <p>Tổng số nhân viên</p>
+                            <span class="metric-badge bg-green">Hiện tại</span>
+                        </div>
+                    </div>
+                    
+                    <div class="metric-card metric-danger">
+                        <div class="metric-icon">
+                            <i class="fas fa-user-times"></i>
+                        </div>
+                        <div class="metric-content">
+                            <h3 id="attritionCount">237</h3>
+                            <p>Số nhân viên nghỉ việc</p>
+                            <span class="metric-badge bg-red">16.1%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="metric-card metric-warning">
+                        <div class="metric-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="metric-content">
+                            <h3 id="avgIncome">$6,503</h3>
+                            <p>Thu nhập trung bình/tháng</p>
+                            <span class="metric-badge bg-orange">Median</span>
+                        </div>
+                    </div>
+                    
+                    <div class="metric-card metric-info">
+                        <div class="metric-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="metric-content">
+                            <h3 id="avgYears">7 năm</h3>
+                            <p>Thâm niên trung bình</p>
+                            <span class="metric-badge bg-blue">Mean</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Charts Grid -->
+                <div class="charts-grid">
+                    <!-- Attrition by Department -->
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h3><i class="fas fa-building"></i> Tỷ lệ nghỉ việc theo phòng ban</h3>
+                            <p>Phân tích tình hình nghỉ việc từng bộ phận</p>
+                        </div>
+                        <div class="chart-body">
+                            <canvas id="chartDepartment"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Attrition by Age Group -->
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h3><i class="fas fa-user-friends"></i> Nghỉ việc theo độ tuổi</h3>
+                            <p>Nhóm tuổi nào có xu hướng nghỉ việc cao</p>
+                        </div>
+                        <div class="chart-body">
+                            <canvas id="chartAge"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Attrition by Overtime -->
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h3><i class="fas fa-business-time"></i> Ảnh hưởng của làm thêm giờ</h3>
+                            <p>Làm thêm giờ và nguy cơ nghỉ việc</p>
+                        </div>
+                        <div class="chart-body">
+                            <canvas id="chartOvertime"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Income Distribution -->
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h3><i class="fas fa-money-bill-wave"></i> Phân phối thu nhập</h3>
+                            <p>So sánh thu nhập: Nghỉ việc vs Ở lại</p>
+                        </div>
+                        <div class="chart-body">
+                            <canvas id="chartIncome"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Attrition by Job Role -->
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h3><i class="fas fa-briefcase"></i> Nghỉ việc theo vị trí công việc</h3>
+                            <p>Top 5 vị trí có tỷ lệ nghỉ việc cao nhất</p>
+                        </div>
+                        <div class="chart-body">
+                            <canvas id="chartJobRole"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Satisfaction Analysis -->
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h3><i class="fas fa-smile"></i> Phân tích mức độ hài lòng</h3>
+                            <p>Tác động của các yếu tố hài lòng đến nghỉ việc</p>
+                        </div>
+                        <div class="chart-body">
+                            <canvas id="chartSatisfaction"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Insights Summary -->
+                <div class="insights-summary">
+                    <div class="insight-box insight-demographics">
+                        <h4><i class="fas fa-exclamation-circle"></i> Yếu tố nguy cơ chính</h4>
+                        <div class="insight-items">
+                            <div class="insight-item">
+                                <div class="insight-label"><i class="fas fa-check"></i> Làm thêm giờ:</div>
+                                <div class="insight-text">Nhân viên làm OT có tỷ lệ nghỉ việc cao gấp 3 lần</div>
+                            </div>
+                            <div class="insight-item">
+                                <div class="insight-label"><i class="fas fa-check"></i> Độ tuổi trẻ:</div>
+                                <div class="insight-text">Nhân viên dưới 30 tuổi có xu hướng nghỉ việc cao hơn</div>
+                            </div>
+                            <div class="insight-item">
+                                <div class="insight-label"><i class="fas fa-check"></i> Thu nhập thấp:</div>
+                                <div class="insight-text">Thu nhập dưới $3,000/tháng là yếu tố nguy cơ chính</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="insight-box insight-work">
+                        <h4><i class="fas fa-briefcase"></i> Công việc & Vị trí</h4>
+                        <div class="insight-items">
+                            <div class="insight-item">
+                                <div class="insight-label"><i class="fas fa-check"></i> Top ngành có tỷ lệ nghỉ cao:</div>
+                                <div class="insight-text">Sales Representative, Lab Technician, Research Scientist</div>
+                            </div>
+                            <div class="insight-item">
+                                <div class="insight-label"><i class="fas fa-check"></i> Khoảng cách xa:</div>
+                                <div class="insight-text">Nhân viên ở xa công ty (>10km) dễ nghỉ việc hơn</div>
+                            </div>
+                            <div class="insight-item">
+                                <div class="insight-label"><i class="fas fa-check"></i> Entry Level:</div>
+                                <div class="insight-text">Nhân viên cấp độ thấp tìm kiếm cơ hội mới</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="insight-box insight-satisfaction">
+                        <h4><i class="fas fa-star"></i> Hài lòng & Động lực công việc</h4>
+                        <div class="insight-items">
+                            <div class="insight-item">
+                                <div class="insight-label"><i class="fas fa-check"></i> Hài lòng thấp:</div>
+                                <div class="insight-text">Job Satisfaction thấp dẫn đến tỷ lệ nghỉ cao gấp 2 lần</div>
+                            </div>
+                            <div class="insight-item">
+                                <div class="insight-label"><i class="fas fa-check"></i> Môi trường làm việc:</div>
+                                <div class="insight-text">Environment Satisfaction thấp là nguy cơ lớn</div>
+                            </div>
+                            <div class="insight-item">
+                                <div class="insight-label"><i class="fas fa-check"></i> Không có Stock Option:</div>
+                                <div class="insight-text">Khiến nhân viên dễ rời bỏ công ty</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Risk Factors Section -->
+                <div class="risk-factors-section">
+                    <div class="risk-header">
+                        <h3><i class="fas fa-exclamation-triangle"></i> Các yếu tố nguy cơ nghỉ việc cao</h3>
+                        <p>Insights quan trọng từ phân tích dữ liệu</p>
+                    </div>
+                    <div class="risk-cards">
+                        <div class="risk-card risk-high">
+                            <div class="risk-icon"><i class="fas fa-user-clock"></i></div>
+                            <h4>Làm thêm giờ</h4>
+                            <p>Nhân viên làm OT có tỷ lệ nghỉ việc <strong>cao gấp 3 lần</strong> so với không OT</p>
+                        </div>
+                        <div class="risk-card risk-high">
+                            <div class="risk-icon"><i class="fas fa-birthday-cake"></i></div>
+                            <h4>Độ tuổi trẻ</h4>
+                            <p>Nhân viên <strong>dưới 30 tuổi</strong> có xu hướng nghỉ việc cao hơn đáng kể</p>
+                        </div>
+                        <div class="risk-card risk-medium">
+                            <div class="risk-icon"><i class="fas fa-route"></i></div>
+                            <h4>Khoảng cách xa</h4>
+                            <p>Nhân viên ở <strong>xa công ty (>10km)</strong> dễ nghỉ việc hơn</p>
+                        </div>
+                        <div class="risk-card risk-medium">
+                            <div class="risk-icon"><i class="fas fa-money-bill"></i></div>
+                            <h4>Thu nhập thấp</h4>
+                            <p>Thu nhập <strong>dưới $3,000/tháng</strong> là yếu tố nguy cơ chính</p>
+                        </div>
+                        <div class="risk-card risk-medium">
+                            <div class="risk-icon"><i class="fas fa-heart-broken"></i></div>
+                            <h4>Hài lòng thấp</h4>
+                            <p>Job Satisfaction thấp dẫn đến <strong>tỷ lệ nghỉ cao gấp 2 lần</strong></p>
+                        </div>
+                        <div class="risk-card risk-low">
+                            <div class="risk-icon"><i class="fas fa-user-tie"></i></div>
+                            <h4>Entry Level</h4>
+                            <p>Nhân viên <strong>cấp độ thấp</strong> có xu hướng tìm kiếm cơ hội mới</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Management Section -->
+            <div class="data-section" id="dataSection" style="display:none;">
+                <!-- Header -->
+                <div class="data-header">
+                    <div class="data-header-left">
+                        <h2><i class="fas fa-database"></i> Hệ thống quản lý dữ liệu nhân sự</h2>
+                        <p>Quản lý và theo dõi toàn bộ dữ liệu nhân viên</p>
+                    </div>
+
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="stats-cards">
+                    <div class="stat-card">
+                        <div class="stat-info">
+                            <span class="stat-label">Tổng nhân viên</span>
+                            <span class="stat-value" id="statTotal">0</span>
+                        </div>
+                        <div class="stat-icon" style="color:#2ecc71;"><i class="fas fa-users"></i></div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-info">
+                            <span class="stat-label">Trang hiện tại</span>
+                            <span class="stat-value" id="statCurrentPage">1</span>
+                        </div>
+                        <div class="stat-icon" style="color:#3498db;"><i class="fas fa-file-alt"></i></div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-info">
+                            <span class="stat-label">Số dòng / trang</span>
+                            <span class="stat-value" id="statPageSize">10</span>
+                        </div>
+                        <div class="stat-icon" style="color:#e67e22;"><i class="fas fa-filter"></i></div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-info">
+                            <span class="stat-label">Tổng số trang</span>
+                            <span class="stat-value" id="statTotalPages">0</span>
+                        </div>
+                        <div class="stat-icon" style="color:#9b59b6;"><i class="fas fa-layer-group"></i></div>
+                    </div>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="data-search-bar">
+                    <div class="search-input-wrapper">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="dataSearchInput" placeholder="Tìm kiếm theo biến định tính: Attrition, Department, Gender, JobRole, OverTime...">
+                    </div>
+                    <button class="btn-search" id="btnSearch"><i class="fas fa-search"></i> Tìm kiếm</button>
+                    <button class="btn-refresh" id="btnRefresh"><i class="fas fa-sync-alt"></i> Làm mới</button>
+                </div>
+
+                <!-- Data Table -->
+                <div class="data-table-wrapper">
+                    <table class="data-table" id="dataTable">
+                        <thead>
+                            <tr id="tableHeader"></tr>
+                        </thead>
+                        <tbody id="tableBody"></tbody>
+                    </table>
+                </div>
+
+                <!-- Pagination -->
+                <div class="data-pagination">
+                    <div class="pagination-info">
+                        Hiển thị <span id="showFrom">0</span> - <span id="showTo">0</span> trên tổng <span id="showTotal">0</span> nhân viên
+                    </div>
+                    <div class="pagination-controls">
+                        <button class="page-btn" id="btnFirst" title="Trang đầu"><i class="fas fa-angle-double-left"></i></button>
+                        <button class="page-btn" id="btnPrev" title="Trang trước"><i class="fas fa-angle-left"></i></button>
+                        <div class="page-numbers" id="pageNumbers"></div>
+                        <button class="page-btn" id="btnNext" title="Trang sau"><i class="fas fa-angle-right"></i></button>
+                        <button class="page-btn" id="btnLast" title="Trang cuối"><i class="fas fa-angle-double-right"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Report Section - Phân tích theo nhóm -->
+            <div class="report-section" id="reportSection" style="display:none;">
+                <!-- Header -->
+                <div class="report-header">
+                    <div class="report-header-left">
+                        <h2><i class="fas fa-chart-bar"></i> Phân tích theo nhóm</h2>
+                        <p>Chọn nhóm để xem phân tích chi tiết</p>
+                    </div>
+                </div>
+
+                <!-- Tab Navigation -->
+                <div class="report-tabs">
+                    <button class="report-tab-btn active" data-tab="demographics">
+                        <i class="fas fa-users"></i> Nhân khẩu học
+                    </button>
+                    <button class="report-tab-btn" data-tab="job-attributes">
+                        <i class="fas fa-briefcase"></i> Job Attributes
+                    </button>
+                    <button class="report-tab-btn" data-tab="performance">
+                        <i class="fas fa-star"></i> Performance & Satisfaction
+                    </button>
+                </div>
+
+                <!-- Tab Contents -->
+                <div class="report-tab-content">
+                    <!-- Demographics Tab -->
+                    <div class="report-tab-pane active" id="demographics-content">
+                        <div class="report-content-header">
+                            <h3>Phân tích Nhân khẩu học</h3>
+                            <p>Phân tích chi tiết về độ tuổi, giới tính, trạng thái hôn nhân và các yếu tố nhân khẩu học khác</p>
+                        </div>
+                        <div class="report-charts-grid">
+                            <!-- Age Distribution -->
+                            <div class="chart-card">
+                                <div class="chart-header">
+                                    <h3><i class="fas fa-user-friends"></i> Phân phối độ tuổi theo Attrition</h3>
+                                    <p>So sánh độ tuổi giữa nhóm nghỉ việc và ở lại</p>
+                                </div>
+                                <div class="chart-body">
+                                    <canvas id="chartDemoAge"></canvas>
+                                </div>
+                            </div>
+
+                            <!-- Gender Distribution -->
+                            <div class="chart-card">
+                                <div class="chart-header">
+                                    <h3><i class="fas fa-venus-mars"></i> Giới tính theo Attrition</h3>
+                                    <p>Tỷ lệ nghỉ việc theo giới tính</p>
+                                </div>
+                                <div class="chart-body">
+                                    <canvas id="chartDemoGender"></canvas>
+                                </div>
+                            </div>
+
+                            <!-- Marital Status -->
+                            <div class="chart-card">
+                                <div class="chart-header">
+                                    <h3><i class="fas fa-ring"></i> Tình trạng hôn nhân</h3>
+                                    <p>Ảnh hưởng của hôn nhân đến tỷ lệ nghỉ việc</p>
+                                </div>
+                                <div class="chart-body">
+                                    <canvas id="chartDemoMarital"></canvas>
+                                </div>
+                            </div>
+
+                            <!-- Education Field -->
+                            <div class="chart-card">
+                                <div class="chart-header">
+                                    <h3><i class="fas fa-graduation-cap"></i> Lĩnh vực đào tạo</h3>
+                                    <p>Phân tích theo ngành học</p>
+                                </div>
+                                <div class="chart-body">
+                                    <canvas id="chartDemoEducationField"></canvas>
+                                </div>
+                            </div>
+
+                            <!-- Technical vs Non-Technical -->
+                            <div class="chart-card">
+                                <div class="chart-header">
+                                    <h3><i class="fas fa-cogs"></i> Technical vs Non-Technical</h3>
+                                    <p>So sánh nhóm kỹ thuật và phi kỹ thuật</p>
+                                </div>
+                                <div class="chart-body">
+                                    <canvas id="chartDemoTechnical"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Nhận xét Demographics -->
+                        <div class="report-insights">
+                            <div class="report-insight-header">
+                                <i class="fas fa-lightbulb"></i>
+                                <h4>Nhận xét & Insight</h4>
+                            </div>
+                            <div class="report-insight-items">
+                                <div class="report-insight-item">
+                                    <div class="insight-icon"><i class="fas fa-user-clock"></i></div>
+                                    <div class="insight-content">
+                                        <strong>Nhóm trẻ tuổi có xu hướng nghỉ việc cao hơn</strong>
+                                        <p>Nhân viên nghỉ việc có median tuổi thấp hơn rõ rệt so với nhóm ở lại. Nhóm lao động trẻ thường đang tìm kiếm cơ hội tốt hơn hoặc chưa ổn định lâu dài với tổ chức.</p>
+                                    </div>
+                                </div>
+                                <div class="report-insight-item">
+                                    <div class="insight-icon"><i class="fas fa-ring"></i></div>
+                                    <div class="insight-content">
+                                        <strong>Nhân viên độc thân có tỷ lệ nghỉ việc cao nhất</strong>
+                                        <p>Nhóm đã kết hôn có xu hướng ở lại nhiều hơn, cho thấy sự ổn định gia đình có thể làm tăng mức độ gắn bó với công việc.</p>
+                                    </div>
+                                </div>
+                                <div class="report-insight-item">
+                                    <div class="insight-icon"><i class="fas fa-cogs"></i></div>
+                                    <div class="insight-content">
+                                        <strong>Nhóm Technical có biến động nhân sự cao hơn</strong>
+                                        <p>Các vị trí kỹ thuật có tính cạnh tranh cao trên thị trường lao động, nhiều cơ hội chuyển việc. Trình độ học vấn chỉ đóng vai trò nền tảng, tính chất công việc mới là yếu tố ảnh hưởng mạnh hơn.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Job Attributes Tab -->
+                    <div class="report-tab-pane" id="job-attributes-content">
+                        <div class="report-content-header">
+                            <h3>Phân tích Job Attributes</h3>
+                            <p>Phân tích chi tiết về vị trí công việc, phòng ban, trình độ công việc, và các yếu tố liên quan đến công việc</p>
+                        </div>
+                        <div class="report-charts-grid">
+                            <!-- Department -->
+                            <div class="chart-card">
+                                <div class="chart-header">
+                                    <h3><i class="fas fa-building"></i> Phòng ban theo Attrition</h3>
+                                    <p>Tỷ lệ nghỉ việc theo từng bộ phận</p>
+                                </div>
+                                <div class="chart-body">
+                                    <canvas id="chartJobDepartment"></canvas>
+                                </div>
+                            </div>
+
+                            <!-- Job Role -->
+                            <div class="chart-card">
+                                <div class="chart-header">
+                                    <h3><i class="fas fa-briefcase"></i> Vị trí công việc</h3>
+                                    <p>Top vị trí có tỷ lệ nghỉ việc cao</p>
+                                </div>
+                                <div class="chart-body">
+                                    <canvas id="chartJobRoleReport"></canvas>
+                                </div>
+                            </div>
+
+                            <!-- Monthly Income -->
+                            <div class="chart-card">
+                                <div class="chart-header">
+                                    <h3><i class="fas fa-money-bill-wave"></i> Thu nhập hàng tháng</h3>
+                                    <p>Phân phối thu nhập theo Attrition</p>
+                                </div>
+                                <div class="chart-body">
+                                    <canvas id="chartJobIncome"></canvas>
+                                </div>
+                            </div>
+
+                            <!-- Years at Company -->
+                            <div class="chart-card">
+                                <div class="chart-header">
+                                    <h3><i class="fas fa-calendar-alt"></i> Thâm niên công ty</h3>
+                                    <p>Số năm làm việc tại công ty</p>
+                                </div>
+                                <div class="chart-body">
+                                    <canvas id="chartJobYears"></canvas>
+                                </div>
+                            </div>
+
+                            <!-- Business Travel -->
+                            <div class="chart-card">
+                                <div class="chart-header">
+                                    <h3><i class="fas fa-plane"></i> Tần suất đi công tác</h3>
+                                    <p>Ảnh hưởng của công tác đến nghỉ việc</p>
+                                </div>
+                                <div class="chart-body">
+                                    <canvas id="chartJobTravel"></canvas>
+                                </div>
+                            </div>
+
+                            <!-- Job Level -->
+                            <div class="chart-card">
+                                <div class="chart-header">
+                                    <h3><i class="fas fa-level-up-alt"></i> Cấp bậc công việc</h3>
+                                    <p>Tỷ lệ nghỉ việc theo cấp độ</p>
+                                </div>
+                                <div class="chart-body">
+                                    <canvas id="chartJobLevel"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Nhận xét Job Attributes -->
+                        <div class="report-insights">
+                            <div class="report-insight-header">
+                                <i class="fas fa-lightbulb"></i>
+                                <h4>Nhận xét & Insight</h4>
+                            </div>
+                            <div class="report-insight-items">
+                                <div class="report-insight-item">
+                                    <div class="insight-icon"><i class="fas fa-briefcase"></i></div>
+                                    <div class="insight-content">
+                                        <strong>Sales Representative & Lab Technician có tỷ lệ nghỉ việc cao nhất</strong>
+                                        <p>Sales Representative (39.8%) và Laboratory Technician (23.9%) dẫn đầu. Các vị trí tuyến đầu có áp lực doanh số, tính lặp lại cao và cơ hội chuyển việc lớn trên thị trường.</p>
+                                    </div>
+                                </div>
+                                <div class="report-insight-item">
+                                    <div class="insight-icon"><i class="fas fa-money-bill-wave"></i></div>
+                                    <div class="insight-content">
+                                        <strong>Thu nhập thấp và thâm niên ngắn là yếu tố nguy cơ chính</strong>
+                                        <p>Nhóm nghỉ việc tập trung ở mức thu nhập thấp và số năm làm việc ít. Giai đoạn đầu sự nghiệp là thời điểm dễ xảy ra nghỉ việc nhất.</p>
+                                    </div>
+                                </div>
+                                <div class="report-insight-item">
+                                    <div class="insight-icon"><i class="fas fa-plane"></i></div>
+                                    <div class="insight-content">
+                                        <strong>Đi công tác thường xuyên làm tăng nguy cơ nghỉ việc</strong>
+                                        <p>Nhân viên Travel_Frequently có tỷ lệ nghỉ việc cao hơn. Entry Level & Mid Level chiếm tỷ lệ biến động cao nhất, khi vị trí càng cao thì khả năng gắn bó càng lớn.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Performance & Satisfaction Tab -->
+                    <div class="report-tab-pane" id="performance-content">
+                        <div class="report-content-header">
+                            <h3>Phân tích Performance & Satisfaction</h3>
+                            <p>Phân tích chi tiết về mức độ hài lòng, hiệu suất công việc, cân bằng làm việc và cuộc sống</p>
+                        </div>
+                        <div class="report-charts-grid">
+                            <!-- Performance Rating -->
+                            <div class="chart-card">
+                                <div class="chart-header">
+                                    <h3><i class="fas fa-star"></i> Đánh giá hiệu suất</h3>
+                                    <p>Mức độ đánh giá công việc</p>
+                                </div>
+                                <div class="chart-body">
+                                    <canvas id="chartPerfRating"></canvas>
+                                </div>
+                            </div>
+
+                            <!-- Job Involvement -->
+                            <div class="chart-card">
+                                <div class="chart-header">
+                                    <h3><i class="fas fa-handshake"></i> Mức độ tham gia công việc</h3>
+                                    <p>Độ gắn bó với công việc</p>
+                                </div>
+                                <div class="chart-body">
+                                    <canvas id="chartPerfInvolvement"></canvas>
+                                </div>
+                            </div>
+
+                            <!-- Job Satisfaction -->
+                            <div class="chart-card">
+                                <div class="chart-header">
+                                    <h3><i class="fas fa-smile"></i> Mức độ hài lòng công việc</h3>
+                                    <p>Sự hài lòng với công việc</p>
+                                </div>
+                                <div class="chart-body">
+                                    <canvas id="chartPerfJobSat"></canvas>
+                                </div>
+                            </div>
+
+                            <!-- Environment Satisfaction -->
+                            <div class="chart-card">
+                                <div class="chart-header">
+                                    <h3><i class="fas fa-tree"></i> Hài lòng môi trường làm việc</h3>
+                                    <p>Đánh giá môi trường nội bộ</p>
+                                </div>
+                                <div class="chart-body">
+                                    <canvas id="chartPerfEnvSat"></canvas>
+                                </div>
+                            </div>
+
+                            <!-- Work-Life Balance -->
+                            <div class="chart-card">
+                                <div class="chart-header">
+                                    <h3><i class="fas fa-balance-scale"></i> Cân bằng công việc - cuộc sống</h3>
+                                    <p>Mức độ cân bằng giữa công việc và cuộc sống</p>
+                                </div>
+                                <div class="chart-body">
+                                    <canvas id="chartPerfWorkLife"></canvas>
+                                </div>
+                            </div>
+
+                            <!-- Relationship Satisfaction -->
+                            <div class="chart-card">
+                                <div class="chart-header">
+                                    <h3><i class="fas fa-users"></i> Hài lòng quan hệ đồng nghiệp</h3>
+                                    <p>Mức độ hài lòng với quan hệ làm việc</p>
+                                </div>
+                                <div class="chart-body">
+                                    <canvas id="chartPerfRelationship"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Nhận xét Performance & Satisfaction -->
+                        <div class="report-insights">
+                            <div class="report-insight-header">
+                                <i class="fas fa-lightbulb"></i>
+                                <h4>Nhận xét & Insight</h4>
+                            </div>
+                            <div class="report-insight-items">
+                                <div class="report-insight-item">
+                                    <div class="insight-icon"><i class="fas fa-star"></i></div>
+                                    <div class="insight-content">
+                                        <strong>Hiệu suất làm việc không phải yếu tố chính gây nghỉ việc</strong>
+                                        <p>Phần lớn nhân viên dù nghỉ hay không đều ở mức "Excellent". Ngay cả nhân viên có hiệu suất tốt vẫn rời công ty nếu các yếu tố khác không được đáp ứng.</p>
+                                    </div>
+                                </div>
+                                <div class="report-insight-item">
+                                    <div class="insight-icon"><i class="fas fa-handshake"></i></div>
+                                    <div class="insight-content">
+                                        <strong>Mức độ gắn kết thấp dẫn đến nghỉ việc cao</strong>
+                                        <p>Job Involvement và Job Satisfaction thấp/trung bình có tỷ lệ nghỉ việc cao hơn. Khi nhân viên không cảm thấy gắn bó, thiếu động lực, họ dễ đưa ra quyết định rời đi.</p>
+                                    </div>
+                                </div>
+                                <div class="report-insight-item">
+                                    <div class="insight-icon"><i class="fas fa-balance-scale"></i></div>
+                                    <div class="insight-content">
+                                        <strong>Môi trường và cân bằng cuộc sống là yếu tố quan trọng giữ chân nhân sự</strong>
+                                        <p>Work-Life Balance ở mức "Bad" hoặc "Good" có tỷ lệ nghỉ việc cao hơn nhóm "Better/Best". Chất lượng môi trường nội bộ và trải nghiệm làm việc tổng thể đóng vai trò then chốt.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Model Training Section -->
+            <div class="model-training-section" id="modelTrainingSection" style="display:none;">
+                <!-- Header -->
+                <div class="training-header">
+                    <div class="training-header-left">
+                        <h2><i class="fas fa-brain"></i> TRAINER</h2>
+                        <p>Huấn luyện và đánh giá mô hình Machine Learning</p>
+                    </div>
+                </div>
+
+                <!-- Main Training Content -->
+                <div class="training-main-content">
+                    <!-- Training Model Card -->
+                    <div class="training-card">
+                        <div class="card-header">
+                            <i class="fas fa-play-circle"></i>
+                            <span>Training Model</span>
+                        </div>
+                        <div class="card-body">
+                            <!-- Model Selection -->
+                            <div class="form-group">
+                                <label class="form-label">Model</label>
+                                <div class="toggle-group" id="modelToggleGroup">
+                                    <button class="toggle-btn" data-model="LogisticRegression">LogisticRegression</button>
+                                    <button class="toggle-btn" data-model="DecisionTree">DecisionTree</button>
+                                    <button class="toggle-btn active" data-model="RandomForest">RandomForest</button>
+                                    <button class="toggle-btn" data-model="XGBoost">XGBoost</button>
+                                </div>
+                            </div>
+
+                            <!-- Resampling Method -->
+                            <div class="form-group">
+                                <label class="form-label">Resampling Method</label>
+                                <div class="toggle-group" id="resamplingToggleGroup">
+                                    <button class="toggle-btn active" data-resampling="SMOTE">SMOTE</button>
+                                    <button class="toggle-btn" data-resampling="ClassWeight">Class Weight</button>
+                                </div>
+                            </div>
+
+                            <!-- Random State -->
+                            <div class="form-group">
+                                <label class="form-label">Random State</label>
+                                <input type="number" class="form-input" id="randomState" value="42">
+                                <span class="form-hint">Use the same value to reproduce results</span>
+                            </div>
+
+                            <!-- Test Size -->
+                            <div class="form-group">
+                                <label class="form-label">Test Size</label>
+                                <input type="number" class="form-input" id="testSize" value="0.2" step="0.1" min="0.1" max="0.9">
+                                <span class="form-hint">Proportion of test data (0.1 - 0.9)</span>
+                            </div>
+
+                            <!-- Train Button -->
+                            <button class="btn-train" id="btnTrainModel">
+                                <i class="fas fa-play"></i> Train model
+                            </button>
+                            <div class="success-message" id="trainSuccessMsg" style="display: none;">
+                                <i class="fas fa-check-circle"></i> Model trained successfully!
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Model Evaluation Card -->
+                    <div class="evaluation-card">
+                        <div class="card-header evaluation-header">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Model Evaluation</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="eval-info">
+                                <div class="eval-row">
+                                    <span class="eval-label">Model:</span>
+                                    <span class="eval-value" id="evalModel">—</span>
+                                </div>
+                                <div class="eval-row">
+                                    <span class="eval-label">Resampling:</span>
+                                    <span class="eval-value" id="evalResampling">—</span>
+                                </div>
+                            </div>
+
+                            <!-- Overall -->
+                            <div class="eval-section-title">Overall</div>
+                            <div class="metrics-grid">
+                                <div class="metric-item">
+                                    <span class="metric-label">Accuracy</span>
+                                    <div class="metric-value-box">
+                                        <span id="metricAccuracy">—</span>
+                                    </div>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-label">Precision</span>
+                                    <div class="metric-value-box">
+                                        <span id="metricPrecision">—</span>
+                                    </div>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-label">Recall</span>
+                                    <div class="metric-value-box">
+                                        <span id="metricRecall">—</span>
+                                    </div>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-label">F1 Score</span>
+                                    <div class="metric-value-box">
+                                        <span id="metricF1">—</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Per-class: No (0) -->
+                            <div class="eval-section-title">Class: No <span class="class-tag class-tag-no">Attrition = 0</span></div>
+                            <div class="metrics-grid">
+                                <div class="metric-item">
+                                    <span class="metric-label">Accuracy</span>
+                                    <div class="metric-value-box">
+                                        <span id="metricAccuracyNo">—</span>
+                                    </div>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-label">Precision</span>
+                                    <div class="metric-value-box">
+                                        <span id="metricPrecisionNo">—</span>
+                                    </div>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-label">Recall</span>
+                                    <div class="metric-value-box">
+                                        <span id="metricRecallNo">—</span>
+                                    </div>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-label">F1 Score</span>
+                                    <div class="metric-value-box">
+                                        <span id="metricF1No">—</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Per-class: Yes (1) -->
+                            <div class="eval-section-title">Class: Yes <span class="class-tag class-tag-yes">Attrition = 1</span></div>
+                            <div class="metrics-grid">
+                                <div class="metric-item">
+                                    <span class="metric-label">Accuracy</span>
+                                    <div class="metric-value-box">
+                                        <span id="metricAccuracyYes">—</span>
+                                    </div>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-label">Precision</span>
+                                    <div class="metric-value-box">
+                                        <span id="metricPrecisionYes">—</span>
+                                    </div>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-label">Recall</span>
+                                    <div class="metric-value-box">
+                                        <span id="metricRecallYes">—</span>
+                                    </div>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-label">F1 Score</span>
+                                    <div class="metric-value-box">
+                                        <span id="metricF1Yes">—</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Evaluate Button -->
+                            <button class="btn-evaluate" id="btnEvaluate">
+                                <i class="fas fa-chart-line"></i> Evaluate
+                            </button>
+                            <div class="success-message" id="evaluateSuccessMsg" style="display: none;">
+                                <i class="fas fa-check-circle"></i> Model evaluated successfully!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Save Model Section -->
+                <div class="save-model-section">
+                    <div class="save-model-card">
+                        <div class="card-header save-header">
+                            <i class="fas fa-save"></i>
+                            <span>Save Model</span>
+                        </div>
+                        <p class="save-description">Save the currently trained model to persistent storage for future use.</p>
+                        <button class="btn-save-model" id="btnSaveModel">
+                            <i class="fas fa-download"></i> Save Current Trained Model
+                        </button>
+                        <div class="success-message" id="saveSuccessMsg" style="display: none;">
+                            <i class="fas fa-check-circle"></i> Model saved successfully!
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Training Status/Log -->
+                <div class="training-log" id="trainingLog" style="display:none;">
+                    <div class="log-header">
+                        <i class="fas fa-terminal"></i> Training Log
+                    </div>
+                    <div class="log-content" id="logContent"></div>
+                </div>
+            </div>
+
+            <!-- Prediction Section -->
+            <div class="prediction-section" id="predictionSection" style="display:none;">
+                <!-- Header -->
+                <div class="prediction-header">
+                    <div class="prediction-header-left">
+                        <h2><i class="fas fa-chart-line"></i> PREDICTION</h2>
+                        <p>Employee Attrition Prediction System</p>
+                    </div>
+                </div>
+
+                <!-- Load Model Section -->
+                <div class="load-model-card">
+                    <div class="card-header">
+                        <i class="fas fa-folder-open"></i>
+                        <span>Load Model</span>
+                    </div>
+                    <div class="card-body">
+                        <input type="file" id="modelFileInput" accept=".pkl,.joblib,.json" style="display:none;">
+                        <div class="file-input-display" id="fileInputDisplay">
+                            <input type="text" id="modelFileName" placeholder="No model selected" readonly>
+                            <button class="btn-browse" onclick="document.getElementById('modelFileInput').click();">
+                                <i class="fas fa-search"></i> Browse
+                            </button>
+                        </div>
+                        <button class="btn-load-model" id="btnLoadModel">
+                            <i class="fas fa-upload"></i> Load Selected Model
+                        </button>
+                        <div class="success-message" id="loadModelSuccessMsg" style="display: none;">
+                            <i class="fas fa-check-circle"></i> Model loaded successfully!
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Input Form Grid -->
+                <div class="prediction-grid">
+                    <!-- Left Column: Numeric Inputs -->
+                    <div class="prediction-card">
+                        <div class="card-header">
+                            <i class="fas fa-list-ol"></i>
+                            <span>Employee Details</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label class="form-label">Age</label>
+                                <input type="number" id="inputAge" class="form-input" placeholder="Enter age" min="18" max="100">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Monthly Income</label>
+                                <input type="number" id="inputMonthlyIncome" class="form-input" placeholder="Enter monthly income" min="0">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Distance From Home</label>
+                                <input type="number" id="inputDistanceFromHome" class="form-input" placeholder="Enter distance (km)" min="0">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Years At Company</label>
+                                <input type="number" id="inputYearsAtCompany" class="form-input" placeholder="Enter years" min="0">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Years In Current Role</label>
+                                <input type="number" id="inputYearsInCurrentRole" class="form-input" placeholder="Enter years" min="0">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Total Working Years</label>
+                                <input type="number" id="inputTotalWorkingYears" class="form-input" placeholder="Enter total years" min="0">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Middle Column: Categorical Inputs -->
+                    <div class="prediction-card">
+                        <div class="card-header">
+                            <i class="fas fa-dollar-sign"></i>
+                            <span>Work Characteristics</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label class="form-label">Over Time</label>
+                                <select id="inputOverTime" class="form-select">
+                                    <option value="">Select Over Time</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Marital Status</label>
+                                <select id="inputMaritalStatus" class="form-select">
+                                    <option value="">Select Marital Status</option>
+                                    <option value="Single">Single</option>
+                                    <option value="Married">Married</option>
+                                    <option value="Divorced">Divorced</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Business Travel</label>
+                                <select id="inputBusinessTravel" class="form-select">
+                                    <option value="">Select Business Travel</option>
+                                    <option value="Travel_Frequently">Travel Frequently</option>
+                                    <option value="Travel_Rarely">Travel Rarely</option>
+                                    <option value="Non-Travel">Non-Travel</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Education Field</label>
+                                <select id="inputEducationField" class="form-select">
+                                    <option value="">Select Education Field</option>
+                                    <option value="Medical">Medical</option>
+                                    <option value="Life Sciences">Life Sciences</option>
+                                    <option value="Marketing">Marketing</option>
+                                    <option value="Technical Degree">Technical Degree</option>
+                                    <option value="Other">Other</option>
+                                    <option value="Human Resources">Human Resources</option>
+                                </select>
+                            </div>
+
+                            <!-- Predict Button -->
+                            <button class="btn-predict" id="btnPredict">
+                                <i class="fas fa-magic"></i> Predict
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Results -->
+                    <div class="prediction-results-column">
+                        <!-- Prediction Result Card -->
+                        <div class="prediction-card result-card">
+                            <div class="card-header">
+                                <i class="fas fa-clipboard-check"></i>
+                                <span>Prediction Result</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="result-display" id="predictionResultDisplay">
+                                    <div class="result-placeholder">
+                                        <i class="fas fa-chart-pie"></i>
+                                        <p>Result will appear here</p>
+                                    </div>
+                                    <div class="result-content" id="predictionResultContent" style="display:none;">
+                                        <div class="result-item">
+                                            <span class="result-label">Attrition Risk:</span>
+                                            <span class="result-value risk-badge" id="riskBadge">—</span>
+                                        </div>
+                                        <div class="result-item">
+                                            <span class="result-label">Probability:</span>
+                                            <span class="result-value" id="probabilityValue">—</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Recommendation Card -->
+                        <div class="prediction-card recommendation-card">
+                            <div class="card-header">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Recommendation</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="recommendation-display" id="recommendationDisplay">
+                                    <div class="recommendation-placeholder">
+                                        <i class="fas fa-comment-dots"></i>
+                                        <p>Recommendations will appear here after prediction</p>
+                                    </div>
+                                    <div class="recommendation-content" id="recommendationContent" style="display:none;">
+                                        <div class="recommendation-loading" id="recommendationLoading" style="display:none;">
+                                            <i class="fas fa-spinner fa-spin"></i>
+                                            <p>Generating recommendations...</p>
+                                        </div>
+                                        <div class="recommendation-text" id="recommendationText"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
